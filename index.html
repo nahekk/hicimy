@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HICIMY</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="hero">
+        <div class="background"></div>
+        <h1 class="title">HICIMY</h1>
+    </header>
+
+    <main>
+        <section class="category">
+            <h2>AGED #1 (2.2k/2.9k PLN) | ON</h2>
+            <div class="products">
+                <div class="product" onclick="openCheckout('7KBW24D8Q2U6Q')">
+                    <img src="30zl.png" alt="Grafika 30 PLN">
+                    <p class="price">PLN 30</p>
+                    <p>Link na 30 PLN</p>
+                </div>
+                <div class="product" onclick="openCheckout('CR8D3W86SN988')">
+                    <img src="60zl.png" alt="Grafika 60 PLN">
+                    <p class="price">PLN 60</p>
+                    <p>Link na 60 PLN</p>
+                </div>
+                <div class="product" onclick="openCheckout('5TWQFGUB2BU3W')">
+                    <img src="100zl.png" alt="Grafika 100 PLN">
+                    <p class="price">PLN 100</p>
+                    <p>Link na 100 PLN</p>
+                </div>
+                
+                <!-- Checkout Modal -->
+                <div id="paypal-checkout" class="hidden">
+                    <div class="checkout-box">
+                        <button class="close-btn" onclick="closeCheckout()">×</button>
+                        <div id="paypal-container"></div>
+                        <p class="checkout-footer">HICIMY BY: nah</p>
+                    </div>
+                </div>                
+            </div>
+        </section>
+
+        <section class="category">
+            <h2>AGED #2 (0/0.9k PLN) | OFF</h2>
+            <div class="products">
+                <div class="product">
+                    <img src="30zl.png" alt="Produkt 1">
+                    <p class="price">PLN 30</p>
+                    <p>Link na 30 PLN</p>
+                </div>
+                <div class="product">
+                    <img src="60zl.png" alt="Produkt 2">
+                    <p class="price">PLN 60</p>
+                    <p>Link na 60 PLN</p>
+                </div>
+                <div class="product">
+                    <img src="100zl.png" alt="Produkt 3">
+                    <p class="price">PLN 100</p>
+                    <p>Link na 100 PLN</p>
+                </div>
+            </div>
+        </section>
+    </main>    
+    <script src="script.js"></script>
+</body>
+</html>
