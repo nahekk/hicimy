@@ -19,22 +19,20 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function openCheckout(buttonId) {
-    // Resetujemy checkout
     document.getElementById("paypal-container").innerHTML = "";
-    
-    // Pokazujemy checkout
+
     const checkout = document.getElementById("paypal-checkout");
     checkout.classList.add("show");
 
-    // Dodajemy skrypt PayPal
     const paypalScript = document.createElement("script");
-    paypalScript.src = "https://www.paypal.com/sdk/js?client-id=BAAGA82JF3-n8763dYw5EVLZzbJDstJqzUumPlkVAZbNWrs9p_VvL5Fm7CYpVZ8NcJHE1gsrvojzE-IsqI&components=hosted-buttons&disable-funding=venmo&currency=PLN";
+    paypalScript.src = "https://www.paypal.com/sdk/js?client-id=BAAIimVQQCgMwrsh6INBnDToJ7ih674YlVDemj01sQKNFJeFmSKpA2jrKecXEW32SMRQAmf8gMr9VBrb-g&components=hosted-buttons&disable-funding=venmo&currency=PLN";
     paypalScript.onload = function () {
         paypal.HostedButtons({ hostedButtonId: buttonId }).render("#paypal-container");
     };
 
     document.body.appendChild(paypalScript);
 }
+
 
 function closeCheckout() {
     const checkout = document.getElementById("paypal-checkout");
